@@ -15,8 +15,8 @@ app.set('view engine', 'ejs')
 
 
 
-app.get('/', (req, res) => res.render('index')) 
-app.use('/pessoas', pessoas)  
+app.get('/', (req, res) => res.render('index'))  
+app.use('/pessoas', pessoas)    
 
 
 model.sequelize.sync().then(() => {  

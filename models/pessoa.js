@@ -3,9 +3,12 @@ const PessoaModel = (sequelize, DataTypes) => {
         nome: DataTypes.STRING,
         cargo: DataTypes.STRING,
         nascimento: DataTypes.DATE   
-    })  
+    }) 
+    Pessoa.associate = ({Usuario}) => {
+        Pessoa.hasOne(Usuario)
+    }   
     return Pessoa 
-}
+} 
 
 
 

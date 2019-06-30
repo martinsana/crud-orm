@@ -19,7 +19,7 @@ app.get('/', (req, res) => res.render('index'))
 app.use('/pessoas', pessoas)    
 
 
-model.sequelize.sync().then(() => {  
+model.sequelize.sync( {force:true}).then(() => {   
     app.listen(port, () => console.log('CRUD-ORM Listening')) 
 })
    
